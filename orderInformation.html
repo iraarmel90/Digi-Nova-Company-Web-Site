@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Information</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <script src="JavaScript/main.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__h1">Order Information</h1>
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="index.html">Home</a></li>
+                    <li class="header__li"><a href="WebSiteDesign.html">Website Design</a></li>
+                    <li class="header__li"><a href="MobileApps.html">Mobile Applications</a></li>
+                    <li class="header__li"><a href="Sells.html">Electronic Devices Purchase</a></li>                
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h2>Order Form</h2>
+
+            <p>DigiNova Company makes your life easier when it comes to purchase electronic devices, such as computers, tablets, smartphone, printer and so forth. When an given electronic device is not available locally, we work with trusted dozen companies that can deliver it to Burundi.</p>
+
+            <p>If you want to order any device, please sign up first by clicking <button>here</button> and fill the <button>form</button>. You will receive an answer to your request in the following 4 hours during working hours, and 48 hours if the form is filled during the weekend.</p>
+        </section>
+
+        <section>
+            <a>Fill the form</a>
+            <div>
+                <form id="identification">
+                    <label id="name-label">Your Name</label>
+                        <input id="name" type="text" name="name" placeholder="e.g Micheal Dave" required>
+                        <br>
+                    <label id="email">Your email</label>
+                        <input id="email" type="text" name="email" placeholder="micheal123@example.com" required>
+                        <br>
+                    <label id="location">Your location</label>
+                        <input id="location" type="text" placeholder="e.g: Number, Avenue, Road, Municipality, Province" required>
+                        <br>
+                    <label id="device-details">Device Details</label>
+                        <textarea id="device-details" name="device-details" rows="6" placeholder="e.g: Brand: Dell, Model: Inspiron 15, Processor: Intel i7, RAM: 16GB, Storage: 512GB SSD, Screen: 15.6 inches (1920x1080), Graphics: NVIDIA GeForce GTX 1650, Operating System: Windows 11, Color: Silver" required></textarea>
+                        <br>
+                    <button type="submit">Submit Order</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; <time id="year"></time> DIGI NOVA COMPANY. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>

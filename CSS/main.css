@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+/* ||RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLE */
+
+
+
+:root {
+
+    /* || Color */
+
+    --HEADER-BGCOLOR: hsla(215, 100%, 50%, 0.553);
+    --HEADER-COLOR: whitesmoke; 
+    --BODY-BGGOLOR: whitesmoke;
+    --BODY-COLOR: #333; 
+    --HOVER-COLOR: green;
+    --FOCUS-COLOR: red;
+
+    /* || Font */
+
+    --FS-HEADER: 2.5rem;
+    --FF: 'Nunito', sans-serif;
+    --FS-BODY: 1.25rem;
+
+
+/* || Padding & Margin*/
+
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 0.25%;
+    --MARGIN-TB: 0.25em;
+    --MARGIN-SIDE: 0.25%;
+
+/* || Borders */
+
+--BORDER-RADIUS-TL: 10px;
+--BORDER-RADIUS-TR: 10px;
+
+
+}
+
+/* || UTILITIES */
+
+.offscreen {
+    position: absolute;
+    left: -100000px;
+} 
+
+/* || FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    text-align: center;
+    margin: var(--MARGIN-TB);
+   /*  display: block; */
+    border-bottom-right-radius: var(--BORDER-RADIUS-TR);
+    border-bottom-left-radius: var(--BORDER-RADIUS-TR);
+}
+
+
+/* || GENERAL STYLES */
+ 
+html {
+    scroll-behavior: smooth;
+    /* padding: var(--PADDING-TB) var(--PADDING-SIDE); */
+    font-family: var(--FF);
+}
+
+body {
+    min-width: 90%;
+    min-height: 100vh;
+    font-size: var(--FS-BODY);
+    /* background-image: url("/Image/Logo\ --1024-1024.jpg"); */
+    /* background-color: rebeccapurple; */
+    background-image: radial-gradient(blue,whitesmoke); /* Try to understand why this property is not applied to the page */
+    color: var(--BODY-COLOR);
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;    
+}
+
+
+
+.header {
+    color: var(--HEADER-COLOR);
+}
+
+.header__h1 {
+    background-color: var(--HEADER-BGCOLOR);
+    font-size: var(--FS-HEADER);
+    text-align: center;
+    padding: var(--PADDING-TB);
+    border-top-left-radius: var(--BORDER-RADIUS-TL);
+    border-top-right-radius: var(--BORDER-RADIUS-TR);
+}
+
+.header__img {
+    display: block;
+    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style-type: none;
+    padding: var(--PADDING-TB);
+}
+
+.header__ul a:any-link {
+    text-decoration: none;
+    color: var(--BODY-COLOR);
+}
+
+.header__ul a:hover {
+    color: blue;
+}
+
+.header__ul a:focus {
+    color: red;
+}
+
+/* .header__ul:is(a:focus, a:hover) { Try to understand why this CSS code doesn't function.
+    color: red;
+}
+ */
+.header__li {
+    background-color: var(--BODY-BGGOLOR);
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: var(--MARGIN-TB) var(--MARGIN-SIDE);
+}
+
+a {
+    color: var(--HEADER-COLOR);
+}
+
+.section__ul {
+    padding: var(--PADDING-SIDE);
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    gap: 1rem;
+}
+.section__img {
+    display: block;
+    margin: 10px auto;
+    width: auto;
+    height: 30vh;
+}
+
+.section__li {
+    border: 10px solid var(--BODY-BGGOLOR);
+    text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        /* background-color: rebeccapurple; */
+        background-image: radial-gradient(whitesmoke, rebeccapurple );
+    }
+}
+
+
+
