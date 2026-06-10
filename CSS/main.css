@@ -149,7 +149,7 @@ h2, h3 {
 }
 
 a {
-    color: var(--HEADER-COLOR);
+    /* color: var(--HEADER-COLOR); */
 }
 
 .section__ul {
