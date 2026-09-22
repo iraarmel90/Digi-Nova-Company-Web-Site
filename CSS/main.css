@@ -54,13 +54,13 @@
 /* || FOOTER */
 
 footer {
-    position: fixed;
-    bottom: 0;
+    position: static;
     width: 100%;
     background-color: var(--HEADER-BGCOLOR);
     color: var(--HEADER-COLOR);
     text-align: center;
-    margin: var(--MARGIN-TB);
+    margin-top: auto;
+    padding: 0.75rem 1rem;
    /*  display: block; */
     border-bottom-right-radius: var(--BORDER-RADIUS-TR);
     border-bottom-left-radius: var(--BORDER-RADIUS-TR);
@@ -76,19 +76,20 @@ html {
 }
 
 body {
-    min-width: 90%;
+    width: 100%;
+    min-width: 0;
     min-height: 100vh;
     font-size: var(--FS-BODY);
     /* background-image: url("/Image/Logo\ --1024-1024.jpg"); */
     /* background-color: rebeccapurple; */
-    background-image: radial-gradient(blue,whitesmoke); /* Try to understand why this property is not applied to the page */
+    background-color: whitesmoke; /* Try to understand why this property is not applied to the page */
     color: var(--BODY-COLOR);
     background-size: cover;
-    position: absolute;
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;    
+    flex-grow: 1;
 }
 
 
@@ -104,6 +105,7 @@ body {
     padding: var(--PADDING-TB);
     border-top-left-radius: var(--BORDER-RADIUS-TL);
     border-top-right-radius: var(--BORDER-RADIUS-TR);
+    overflow-wrap: anywhere;
 }
 
 .header__img {
@@ -116,9 +118,10 @@ body {
 .header__ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 1rem;
     list-style-type: none;
-    padding: var(--PADDING-TB);
+    padding: 0.75rem 1rem;
 }
 
 .header__ul a:any-link {
@@ -141,6 +144,7 @@ body {
 .header__li {
     background-color: var(--BODY-BGGOLOR);
     text-align: center;
+    padding: 0.4rem 0.7rem;
 }
 
 h2, h3 {
@@ -148,34 +152,78 @@ h2, h3 {
     margin: var(--MARGIN-TB) var(--MARGIN-SIDE);
 }
 
+section {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+p {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
 a {
     /* color: var(--HEADER-COLOR); */
 }
 
 .section__ul {
-    padding: var(--PADDING-SIDE);
+    padding: 0.5rem 0;
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     list-style-type: none;
     gap: 1rem;
 }
 .section__img {
     display: block;
     margin: 10px auto;
-    width: auto;
-    height: 30vh;
+    width: min(100%, 900px);
+    height: auto;
+    max-height: 55vh;
+    object-fit: cover;
 }
 
 .section__li {
     border: 10px solid var(--BODY-BGGOLOR);
     text-align: center;
+    padding: 0.75rem;
+    overflow-wrap: anywhere;
 }
 
-@media screen and (min-width: 576px) {
-    body {
-        /* background-color: rebeccapurple; */
-        background-image: radial-gradient(whitesmoke, rebeccapurple );
+@media screen and (max-width: 575px) {
+    :root {
+        --FS-BODY: 1rem;
     }
+
+    .header__h1 {
+        font-size: 1.6rem;
+    }
+
+    .header__ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header__li {
+        width: 100%;
+    }
+
+    .section__ul {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        width: min(100% - 1rem, 1100px);
+        padding: 0.75rem 0;
+    }
+}
+
+/* @media screen and (min-width: 576px) {
+    body {
+        
+        background-image: radial-gradient(rebeccapurple, whitesmoke );
+    } */ 
 }
 
 
