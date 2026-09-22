@@ -31,27 +31,109 @@
         <section>
             <h2>Fill the form</h2>
             <div>
-                <form id="identification" action="https://formsubmit.co/f304dd325c84350136f53394a0644e60" method="POST">
-                    <input type="hidden" name="_subject" value="New Digi Nova order request">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
+                <form
+                    id="identification"
+                    action="https://formsubmit.co/f304dd325c84350136f53394a0644e60"
+                    method="POST"
+                >
 
-                    <label id="name-label" for="name">Your Name</label>
-                        <input id="name" type="text" name="name" placeholder="e.g. Michael Dave" autocomplete="name" required>
-                        <br>
-                    <label id="email-label" for="email">Your email</label>
-                        <input id="email" type="email" name="email" placeholder="michael123@example.com" autocomplete="email" required>
-                        <br>
-                    <label id="telephone-number" for="telephone">Your telephone number</label>
-                        <input id="telephone" type="tel" name="telephone" placeholder="e.g. +257 62 466 469" autocomplete="tel" required>
-                        <br>
-                    <label id="location-label" for="location">Your location</label>
-                        <input id="location" type="text" name="location" placeholder="e.g. Number, Avenue, Road, Municipality, Province" autocomplete="street-address" required>
-                        <br>
-                    <label id="device-details-label" for="device-details">Device Details</label>
-                        <textarea id="device-details" name="device_details" rows="6" placeholder="e.g. Brand: Dell, Model: Inspiron 15, Processor: Intel i7, RAM: 16GB, Storage: 512GB SSD, Screen: 15.6 inches (1920x1080), Graphics: NVIDIA GeForce GTX 1650, Operating System: Windows 11, Color: Silver" required></textarea>
-                        <br>
-                    <button type="submit" class="submit-form">Submit the Form</button>
+                    <!-- Email subject -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Digi Nova order request"
+                    >
+
+                    <!-- Email template -->
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+                    <!-- Disable FormSubmit CAPTCHA -->
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false"
+                    >
+
+                    <!-- Redirect after successful submission -->
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://yourwebsite.com/thank-you.html"
+                    >
+
+
+                    <label for="name">Your Name</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="e.g. Michael Dave"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <br>
+
+
+                    <label for="email">Your email</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="michael123@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <br>
+
+
+                    <label for="telephone">Your telephone number</label>
+                    <input
+                        id="telephone"
+                        type="tel"
+                        name="telephone"
+                        placeholder="e.g. +257 62 466 469"
+                        autocomplete="tel"
+                        required
+                    >
+
+                    <br>
+
+
+                    <label for="location">Your location</label>
+                    <input
+                        id="location"
+                        type="text"
+                        name="location"
+                        placeholder="e.g. Number, Avenue, Road, Municipality, Province"
+                        autocomplete="street-address"
+                        required
+                    >
+
+                    <br>
+
+
+                    <label for="device-details">Device Details</label>
+                    <textarea
+                        id="device-details"
+                        name="device_details"
+                        rows="6"
+                        placeholder="e.g. Brand: Dell, Model: Inspiron 15, Processor: Intel i7, RAM: 16GB, Storage: 512GB SSD, Screen: 15.6 inches (1920x1080), Graphics: NVIDIA GeForce GTX 1650, Operating System: Windows 11, Color: Silver"
+                        required
+                    ></textarea>
+
+                    <br>
+
+
+                    <button type="submit" class="submit-form">
+                        Submit the Form
+                    </button>
+
                 </form>
             </div>
         </section>
