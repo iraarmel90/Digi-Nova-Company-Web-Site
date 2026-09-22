@@ -190,6 +190,19 @@ a {
     overflow-wrap: anywhere;
 }
 
+.submit-form {
+    /* display: block; */
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    font-size: var(--FS-BODY);
+    /* background-color: var(--HEADER-BGCOLOR); */
+    color: var(--Body-COLOR);
+    /* border: none; */
+    border-radius: var(--BORDER-RADIUS-TL);
+    cursor: pointer;
+    width: 50%;
+}
+
 @media screen and (max-width: 575px) {
     :root {
         --FS-BODY: 1rem;
