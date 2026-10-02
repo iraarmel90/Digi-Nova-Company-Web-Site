@@ -203,6 +203,32 @@ a {
     width: 50%;
 }
 
+#certificat-dialog {
+    width: min(92vw, 900px);
+    max-height: 90vh;
+    margin: auto;
+    padding: 1rem;
+    border: 0;
+}
+
+#certificat-dialog::backdrop {
+    background: rgb(0 0 0 / 70%);
+}
+
+#certificat-dialog img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+#close-certificat-dialog {
+    margin: 0.5rem 0;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 575px) {
     :root {
         --FS-BODY: 1rem;
